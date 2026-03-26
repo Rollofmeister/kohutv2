@@ -1,0 +1,339 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+
+  :root {
+    --linho: #F4EFE6;
+    --salvia: #6B8F71;
+    --pedra: #3D3635;
+    --casca: #7A6458;
+    --borda: #EBE5DC;
+  }
+
+  .preview-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem 0;
+  }
+
+  .card {
+    border: 2px solid transparent;
+    border-radius: 1rem;
+    overflow: hidden;
+    cursor: pointer;
+    transition: border-color 0.2s;
+    background: white;
+  }
+
+  .card.selected {
+    border-color: var(--salvia) !important;
+  }
+
+  .card-label {
+    background: var(--pedra);
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+  }
+
+  .mockup-hero {
+    background: var(--linho);
+    padding: 2rem;
+    font-family: 'DM Sans', sans-serif;
+    min-height: 160px;
+  }
+
+  /* Opção A: Foto à direita, texto à esquerda */
+  .hero-a {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .hero-a .text-side .tag {
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--salvia);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-a .text-side h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: var(--pedra);
+    line-height: 1.2;
+    margin: 0 0 0.6rem;
+  }
+
+  .hero-a .text-side h1 em {
+    color: var(--salvia);
+  }
+
+  .hero-a .text-side p {
+    font-size: 0.78rem;
+    color: var(--casca);
+    line-height: 1.5;
+    margin-bottom: 0.8rem;
+  }
+
+  .cta-pill {
+    display: inline-block;
+    background: var(--salvia);
+    color: white;
+    font-size: 0.7rem;
+    padding: 0.45rem 1.2rem;
+    border-radius: 9999px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+  }
+
+  .photo-placeholder {
+    background: var(--borda);
+    border-radius: 1rem;
+    aspect-ratio: 3/4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--casca);
+    font-size: 0.65rem;
+    font-family: 'DM Sans', sans-serif;
+    max-height: 140px;
+  }
+
+  /* Opção B: Foto de fundo, texto centralizado sobre overlay */
+  .hero-b {
+    position: relative;
+    min-height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-b .bg-photo {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #d6cfc4 0%, #c4b9ad 100%);
+    border-radius: 0;
+  }
+
+  .hero-b .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(244,239,230,0.92) 0%, rgba(244,239,230,0.75) 100%);
+  }
+
+  .hero-b .text-center-content {
+    position: relative;
+    z-index: 2;
+    padding: 1rem;
+  }
+
+  .hero-b .tag {
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--salvia);
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+  }
+
+  .hero-b h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.9rem;
+    font-weight: 300;
+    color: var(--pedra);
+    line-height: 1.2;
+    margin: 0 0 0.5rem;
+  }
+
+  .hero-b p {
+    font-size: 0.72rem;
+    color: var(--casca);
+    margin-bottom: 0.7rem;
+  }
+
+  /* Opção C: Texto + foto sobrepostos / editorial */
+  .hero-c {
+    display: grid;
+    grid-template-columns: 0.6fr 1fr;
+    gap: 0;
+    min-height: 160px;
+  }
+
+  .hero-c .foto-col {
+    background: linear-gradient(160deg, #c8bfb3 0%, #b5a99c 100%);
+    position: relative;
+    border-radius: 0.8rem 0 0 0.8rem;
+    display: flex;
+    align-items: flex-end;
+    padding: 1rem;
+  }
+
+  .hero-c .foto-col .nome-sobre {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.9);
+    font-style: italic;
+  }
+
+  .hero-c .text-col {
+    background: white;
+    padding: 1.5rem 1.5rem 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0 0.8rem 0.8rem 0;
+    border: 1px solid var(--borda);
+    border-left: none;
+  }
+
+  .hero-c .tag {
+    font-size: 0.6rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--salvia);
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+  }
+
+  .hero-c h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--pedra);
+    line-height: 1.2;
+    margin: 0 0 0.5rem;
+  }
+
+  .hero-c p {
+    font-size: 0.7rem;
+    color: var(--casca);
+    margin-bottom: 0.7rem;
+    line-height: 1.4;
+  }
+
+  .trust-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0.7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .trust-list li {
+    font-size: 0.65rem;
+    color: var(--casca);
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .trust-list li::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    background: var(--salvia);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .card-desc {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    color: #555;
+    padding: 0.75rem 1rem 1rem;
+    line-height: 1.5;
+    background: #fafafa;
+    border-top: 1px solid #eee;
+  }
+</style>
+
+<h2>Qual composição de Hero faz mais sentido?</h2>
+<p class="subtitle">Estamos comparando como a foto da Geovana e o texto principal se relacionam. Cada layout transmite uma energia diferente.</p>
+
+<div class="preview-container">
+
+  <!-- Opção A -->
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter" style="display:none">A</div>
+    <div class="card-label">A — Clássico: texto à esquerda, foto à direita</div>
+    <div class="mockup-hero">
+      <div class="hero-a">
+        <div class="text-side">
+          <div class="tag">Pilates terapêutico · Campo Mourão - PR</div>
+          <h1>Alívio de dores e melhora da postura com <em>cuidado individual</em></h1>
+          <p>Atendimento acolhedor para você se movimentar com segurança, no seu ritmo.</p>
+          <ul class="trust-list">
+            <li>Avaliação inicial individual</li>
+            <li>Exercícios personalizados</li>
+            <li>Acompanhamento próximo</li>
+          </ul>
+          <span class="cta-pill">Agendar avaliação no WhatsApp</span>
+        </div>
+        <div class="photo-placeholder">foto da Geovana (3:4)</div>
+      </div>
+    </div>
+    <div class="card-desc">
+      <strong>Leitura natural da esquerda para direita.</strong> A foto ancora a credibilidade enquanto o texto guia a atenção. Mais convencional, funciona bem para conversão direta.
+    </div>
+  </div>
+
+  <!-- Opção B -->
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter" style="display:none">B</div>
+    <div class="card-label">B — Imersivo: foto de fundo com overlay e texto centralizado</div>
+    <div class="mockup-hero">
+      <div class="hero-b">
+        <div class="bg-photo"></div>
+        <div class="overlay"></div>
+        <div class="text-center-content">
+          <div class="tag">Pilates terapêutico · Campo Mourão - PR</div>
+          <h1>Alívio de dores e melhora da<br>postura com <em style="color:var(--salvia)">cuidado individual</em></h1>
+          <p>Movimentar com segurança, no seu ritmo.</p>
+          <span class="cta-pill">Agendar avaliação no WhatsApp</span>
+        </div>
+      </div>
+    </div>
+    <div class="card-desc">
+      <strong>Impacto emocional maior.</strong> A foto da Geovana preenche o fundo, criando uma presença forte. O risco é perder legibilidade se a foto tiver fundo complexo.
+    </div>
+  </div>
+
+  <!-- Opção C -->
+  <div class="card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter" style="display:none">C</div>
+    <div class="card-label">C — Editorial: foto ocupa coluna inteira, texto em painel adjacente</div>
+    <div class="mockup-hero">
+      <div class="hero-c">
+        <div class="foto-col">
+          <div class="nome-sobre">Geovana Kohut<br>Fisioterapeuta</div>
+        </div>
+        <div class="text-col">
+          <div class="tag">Campo Mourão - PR</div>
+          <h1>Alívio de dores com <em style="color:var(--salvia);font-style:italic">cuidado individual</em></h1>
+          <p>Pilates terapêutico e fisioterapia para quem busca melhora real.</p>
+          <ul class="trust-list">
+            <li>Avaliação inicial individual</li>
+            <li>Exercícios personalizados</li>
+            <li>Acompanhamento próximo</li>
+          </ul>
+          <span class="cta-pill">Agendar no WhatsApp</span>
+        </div>
+      </div>
+    </div>
+    <div class="card-desc">
+      <strong>Mais editorial e sofisticado.</strong> A foto da Geovana ganha um peso visual muito maior — quase de revista. Transmite autoridade e distinção. Funciona bem se a foto portrait tiver fundo simples.
+    </div>
+  </div>
+
+</div>
