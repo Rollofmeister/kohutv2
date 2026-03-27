@@ -11,7 +11,7 @@ export function AboutSection() {
           <FadeUp>
             <div className="relative aspect-[3/4] rounded-card overflow-hidden shadow-warm-lg max-w-sm mx-auto md:mx-0">
               <Image
-                src="/geovana-standing.webp"
+                src="/kohut-pro.webp"
                 alt="Geovana Kohut"
                 fill
                 className="object-cover"

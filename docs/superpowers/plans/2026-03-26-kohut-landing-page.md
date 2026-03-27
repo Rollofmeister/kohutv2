@@ -13,7 +13,7 @@
 ## Images required (user must place in `public/` before running dev)
 
 - `public/profissional.webp` — portrait photo for hero
-- `public/geovana-standing.webp` — photo for about section
+- `public/kohut-pro.webp` — photo for about section
 - `public/logo-geovana.jpg` — logo for navbar
 - `public/galeria/espaco-cadillac-reformer.webp`
 - `public/galeria/espaco-biombos.webp`
@@ -1014,7 +1014,7 @@ export function AboutSection() {
           <FadeUp>
             <div className="relative aspect-[3/4] rounded-card overflow-hidden shadow-warm-lg max-w-sm mx-auto md:mx-0">
               <Image
-                src="/geovana-standing.webp"
+                src="/kohut-pro.webp"
                 alt="Geovana Kohut"
                 fill
                 className="object-cover"

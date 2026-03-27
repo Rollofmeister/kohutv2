@@ -66,6 +66,15 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  icons: {
+    icon: [
+      { url: '/favicon/favicon.ico', sizes: 'any' },
+      { url: '/favicon/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+    ],
+    apple: '/favicon/apple-touch-icon.png',
+  },
+  manifest: '/favicon/site.webmanifest',
   verification: {
     google: 'COLE_SEU_GOOGLE_VERIFICATION_CODE_AQUI',
   },
@@ -169,7 +178,7 @@ const schemaLocalBusiness = {
           '@type': 'Service',
           name: 'Fisioterapia Clínica Geral',
           description:
-            'Tratamento de lesões musculoesqueléticas, pós-operatório e reabilitação funcional em Campo Mourão.',
+            'Tratamento de lesões musculoesqueléticas e reabilitação funcional em Campo Mourão.',
         },
       },
     ],

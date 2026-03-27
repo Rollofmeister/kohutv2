@@ -126,7 +126,7 @@ export const serviceGroups: ServiceGroup[] = [
       {
         title: 'Fisioterapia Clínica Geral',
         description:
-          'Tratamento de lesões musculoesqueléticas, pós-operatório e reabilitação funcional.',
+          'Tratamento de lesões musculoesqueléticas e reabilitação funcional.',
       },
     ],
   },

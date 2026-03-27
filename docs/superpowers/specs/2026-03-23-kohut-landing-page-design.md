@@ -113,7 +113,7 @@ src/
 **Mobile:** foto `/profissional.webp` full-width (~55vh) com gradiente bottom + título sobreposto → card linho com subtítulo, trust chips e CTA 100% width.
 
 ### 3. Sobre (Quem sou eu)
-- Foto `/geovana-standing.webp` + texto bio
+- Foto `/kohut-pro.webp` + texto bio
 - H2: "Sou Geovana Kohut, fisioterapeuta e instrutora de Pilates."
 - Lead: atua desde 2023, une fisioterapia clínica e Pilates terapêutico
 - Blockquote em Cormorant Garamond italic: citação de marca
