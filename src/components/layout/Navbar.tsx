@@ -39,6 +39,7 @@ export function Navbar() {
               src="/logo-geovana.jpg"
               alt="Geovana Kohut"
               fill
+              sizes="36px"
               className="object-cover"
             />
           </div>

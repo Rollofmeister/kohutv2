@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://kohutfisiopilates.com.br
+Host: https://kohutfisiopilates.com
 
 # Sitemaps
-Sitemap: https://kohutfisiopilates.com.br/sitemap.xml
+Sitemap: https://kohutfisiopilates.com/sitemap.xml

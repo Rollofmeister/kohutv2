@@ -25,7 +25,7 @@ export function HeroSection() {
         <div className="flex items-center bg-white px-12 xl:px-16 py-20">
           <div className="max-w-md">
             <span className="inline-block font-body text-xs font-medium tracking-widest uppercase text-salvia mb-6">
-              Pilates terapêutico e fisioterapia em Campo Mourão - PR
+              Fisioterapeuta em Campo Mourão - PR &bull; Pilates terapêutico individualizado
             </span>
             <h1
               className="font-display font-light text-pedra leading-tight mb-6"
@@ -60,7 +60,7 @@ export function HeroSection() {
             fill
             className="object-cover object-top"
             priority
-            sizes="100vw"
+            sizes="(max-width: 768px) 100vw, 0px"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-pedra/70" />
           <div className="absolute bottom-0 left-0 right-0 p-6">

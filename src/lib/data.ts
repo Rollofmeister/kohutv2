@@ -53,24 +53,34 @@ export const testimonials: Testimonial[] = [
 
 export const faqs: FaqItem[] = [
   {
-    question: 'Nunca fiz pilates. Posso começar?',
+    question: 'Nunca fiz pilates. Posso começar em Campo Mourão?',
     answer:
-      'Sim! O pilates terapêutico é indicado para todos os níveis, inclusive iniciantes absolutos. A avaliação inicial serve justamente para entender seu histórico e criar um plano seguro e progressivo para você.',
+      'Sim! O pilates terapêutico em Campo Mourão é indicado para todos os níveis, inclusive iniciantes absolutos. A avaliação inicial serve justamente para entender seu histórico e criar um plano seguro e progressivo para você.',
   },
   {
-    question: 'Tenho dor para me movimentar. É indicado?',
+    question: 'Tenho dor nas costas. Pilates terapêutico é indicado?',
     answer:
       'Com certeza. O pilates terapêutico é uma das principais ferramentas para alívio de dores musculares, posturais e articulares. Os exercícios são adaptados à sua condição atual — você nunca vai ser levado além do que seu corpo permite.',
   },
   {
-    question: 'Como funciona a primeira avaliação?',
+    question: 'Como funciona a primeira avaliação de fisioterapia?',
     answer:
-      'A avaliação é uma conversa sobre suas dores, histórico de saúde e objetivos. Em seguida, faço uma análise postural e de movimento. Com isso, monto um plano personalizado para você. O agendamento é pelo WhatsApp.',
+      'A avaliação é uma conversa sobre suas dores, histórico de saúde e objetivos. Em seguida, é feita uma análise postural e de movimento. Com isso, é montado um plano personalizado para você. O agendamento é pelo WhatsApp.',
   },
   {
-    question: 'A Geovana atende em casa em Campo Mourão?',
+    question: 'A fisioterapeuta atende em casa em Campo Mourão?',
     answer:
-      'Sim! Ofereço atendimento de fisioterapia home care em Campo Mourão e região. Entre em contato pelo WhatsApp para verificar disponibilidade e área de atendimento.',
+      'Sim! Geovana Kohut oferece atendimento de fisioterapia home care em Campo Mourão e região. Entre em contato pelo WhatsApp para verificar disponibilidade e área de atendimento.',
+  },
+  {
+    question: 'Pilates para gestantes em Campo Mourão — é seguro?',
+    answer:
+      'Sim, o pilates para gestantes é seguro e recomendado por médicos. As sessões são adaptadas para cada trimestre da gravidez, com foco em conforto, fortalecimento do assoalho pélvico e preparação para o parto.',
+  },
+  {
+    question: 'Qual a diferença entre pilates e fisioterapia?',
+    answer:
+      'A fisioterapia trata lesões e condições clínicas específicas, enquanto o pilates terapêutico trabalha prevenção, fortalecimento e qualidade de vida. No estúdio em Campo Mourão, Geovana Kohut combina as duas abordagens para um cuidado completo e individualizado.',
   },
 ]
 
@@ -123,7 +133,7 @@ export const serviceGroups: ServiceGroup[] = [
 ]
 
 export const credentials: Credential[] = [
-  { label: 'Formação', value: 'Fisioterapia — Unespar' },
+  { label: 'Formação', value: 'Fisioterapia — Integrado' },
   { label: 'Especialização', value: 'Pilates Terapêutico' },
   { label: 'Atuando desde', value: '2023' },
   { label: 'Registro', value: 'CREFITO 375039-F' },
