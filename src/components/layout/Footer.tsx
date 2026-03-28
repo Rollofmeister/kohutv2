@@ -1,4 +1,9 @@
+'use client'
+
+import dynamic from 'next/dynamic'
 import { WHATSAPP_URL, INSTAGRAM_URL, CREFITO } from '@/lib/constants'
+
+const LSSignature = dynamic(() => import('@/components/ui/LSSignature').then(m => m.LSSignature), { ssr: false })
 
 export function Footer() {
   return (
@@ -34,6 +39,10 @@ export function Footer() {
             © {new Date().getFullYear()} Geovana Kohut Fisioterapia e Pilates
           </p>
         </div>
+      </div>
+
+      <div className="max-w-6xl mx-auto mt-6 flex justify-center">
+        <LSSignature />
       </div>
     </footer>
   )
