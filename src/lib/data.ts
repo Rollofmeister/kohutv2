@@ -39,7 +39,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     name: 'Jociane Rodrigues',
-    text: 'Fiz fisioterapia com a Geovana depois de uma cirurgia e a recuperação foi muito além das minhas expectativas. Ela é dedicada, paciente e muito competente.',
+    text: 'A Geovana é dedicada, paciente e muito competente. Minha recuperação foi muito além das minhas expectativas. Recomendo de olhos fechados!',
   },
   {
     name: 'Amanda Rodrigues',
