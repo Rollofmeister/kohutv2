@@ -11,4 +11,6 @@ export const ADDRESS = 'Av. Jorge Walter, 2270 — Centro, Campo Mourão - PR'
 
 export const HOURS = 'Segunda a Sexta, 07h–20h'
 
+export const EMAIL = 'contato@kohutfisiopilates.com'
+
 export const CREFITO = 'CREFITO 375039-F'

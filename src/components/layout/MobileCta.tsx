@@ -25,6 +25,7 @@ export function MobileCta() {
           hidden ? 'translate-y-full' : 'translate-y-0'
         }`}
         style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
+        aria-hidden={hidden}
       >
         <div className="bg-linho border-t border-borda px-4 py-3">
           <a

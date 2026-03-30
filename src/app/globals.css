@@ -26,8 +26,13 @@
     font-family: var(--font-body);
     color: var(--color-pedra);
     background-color: var(--color-linho);
-    scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
   }
 
   * {

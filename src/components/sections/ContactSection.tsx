@@ -1,7 +1,7 @@
 import { FadeUp } from '@/components/ui/FadeUp'
 import { SectionTag } from '@/components/ui/SectionTag'
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
-import { ADDRESS, HOURS, MAPS_URL } from '@/lib/constants'
+import { ADDRESS, HOURS, MAPS_URL, PHONE, EMAIL } from '@/lib/constants'
 
 export function ContactSection() {
   return (
@@ -20,6 +20,26 @@ export function ContactSection() {
             <div>
               <p className="font-body text-xs text-casca uppercase tracking-wider mb-1">Endereço</p>
               <p className="font-body text-pedra text-sm">{ADDRESS}</p>
+            </div>
+            <div className="h-px bg-borda" />
+            <div>
+              <p className="font-body text-xs text-casca uppercase tracking-wider mb-1">Telefone</p>
+              <a
+                href={`tel:${PHONE}`}
+                className="font-body text-pedra text-sm hover:text-salvia transition-colors"
+              >
+                (44) 99834-3726
+              </a>
+            </div>
+            <div className="h-px bg-borda" />
+            <div>
+              <p className="font-body text-xs text-casca uppercase tracking-wider mb-1">E-mail</p>
+              <a
+                href={`mailto:${EMAIL}`}
+                className="font-body text-pedra text-sm hover:text-salvia transition-colors"
+              >
+                {EMAIL}
+              </a>
             </div>
             <div className="h-px bg-borda" />
             <div>
