@@ -142,22 +142,22 @@ export const credentials: Credential[] = [
 export const galleryImages: GalleryImage[] = [
   {
     src: '/galeria/espaco-cadillac-reformer.webp',
-    alt: 'Estúdio — Cadillac e Reformer',
+    alt: 'Estúdio de pilates em Campo Mourão — Cadillac e Reformer',
   },
   {
     src: '/galeria/espaco-biombos.webp',
-    alt: 'Estúdio — Área com biombos',
+    alt: 'Estúdio de pilates em Campo Mourão — área com biombos',
   },
   {
     src: '/galeria/espaco-sala-espelho.webp',
-    alt: 'Estúdio — Sala com espelho',
+    alt: 'Estúdio de fisioterapia e pilates em Campo Mourão — sala com espelho',
   },
   {
     src: '/galeria/espaco-visao-geral.webp',
-    alt: 'Estúdio — Visão geral',
+    alt: 'Estúdio Kohut Fisio Pilates em Campo Mourão — visão geral',
   },
   {
     src: '/galeria/espaco-panoramica.webp',
-    alt: 'Estúdio — Vista panorâmica',
+    alt: 'Estúdio Kohut Fisio Pilates em Campo Mourão — vista panorâmica',
   },
 ]

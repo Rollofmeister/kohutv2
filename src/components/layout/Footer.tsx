@@ -1,9 +1,7 @@
 'use client'
 
-import dynamic from 'next/dynamic'
 import { WHATSAPP_URL, INSTAGRAM_URL, CREFITO } from '@/lib/constants'
-
-const LSSignature = dynamic(() => import('@/components/ui/LSSignature').then(m => m.LSSignature), { ssr: false })
+import { LSSignature } from '@/components/ui/LSSignature'
 
 export function Footer() {
   return (

@@ -84,10 +84,6 @@ export const metadata: Metadata = {
     apple: '/favicon/apple-touch-icon.png',
   },
   manifest: '/favicon/site.webmanifest',
-  // TODO: Substituir pelo codigo real do Google Search Console
-  // verification: {
-  //   google: 'SEU_CODIGO_REAL_AQUI',
-  // },
 }
 
 const schemaLocalBusiness = {
@@ -99,7 +95,7 @@ const schemaLocalBusiness = {
   description:
     'Fisioterapia clínica e pilates terapêutico individualizado em Campo Mourão - PR. Atendimento humanizado para alívio de dores, reabilitação, melhora da postura e qualidade de vida.',
   image: 'https://kohutfisiopilates.com/kohut-pro.webp',
-  logo: 'https://kohutfisiopilates.com/kohut-pro.webp',
+  logo: 'https://kohutfisiopilates.com/logo-geovana.jpg',
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Av. Jorge Walter, 2270, Centro',
@@ -128,6 +124,13 @@ const schemaLocalBusiness = {
     'https://instagram.com/kohut.fisiopilates',
     'https://maps.app.goo.gl/4cabH2ZEFdgtaQs68',
   ],
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '5.0',
+    reviewCount: '2',
+    bestRating: '5',
+    worstRating: '1',
+  },
   priceRange: '$$',
   paymentAccepted: 'Dinheiro, Cartão de Crédito, PIX',
   areaServed: {

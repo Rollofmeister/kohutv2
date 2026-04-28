@@ -15,7 +15,7 @@ export function ServicesSection() {
           <div className="text-center mb-14">
             <SectionTag className="mb-4">Para quem é</SectionTag>
             <h2 className="font-display font-light text-pedra text-4xl md:text-5xl">
-              Como posso te ajudar
+              Pilates e Fisioterapia em Campo Mourão
             </h2>
           </div>
         </FadeUp>

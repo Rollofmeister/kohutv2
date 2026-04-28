@@ -12,7 +12,7 @@ export function AboutSection() {
             <div className="relative aspect-[3/4] rounded-card overflow-hidden shadow-warm-lg max-w-sm mx-auto md:mx-0">
               <Image
                 src="/kohut-pro.webp"
-                alt="Geovana Kohut"
+                alt="Geovana Kohut, fisioterapeuta e instrutora de pilates em Campo Mourão"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 80vw, 40vw"

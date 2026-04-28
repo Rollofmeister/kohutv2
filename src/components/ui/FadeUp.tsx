@@ -1,7 +1,6 @@
 'use client'
 
-import { motion, useInView } from 'framer-motion'
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
 
 interface FadeUpProps {
   children: React.ReactNode
@@ -11,17 +10,33 @@ interface FadeUpProps {
 
 export function FadeUp({ children, delay = 0, className }: FadeUpProps) {
   const ref = useRef<HTMLDivElement>(null)
-  const isInView = useInView(ref, { once: true, margin: '-60px' })
+
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+
+    el.style.opacity = '0'
+    el.style.transform = 'translateY(24px)'
+    el.style.transition = `opacity 0.6s ${delay}s cubic-bezier(0.22,1,0.36,1), transform 0.6s ${delay}s cubic-bezier(0.22,1,0.36,1)`
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          el.style.opacity = '1'
+          el.style.transform = 'none'
+          observer.disconnect()
+        }
+      },
+      { rootMargin: '-60px 0px' },
+    )
+
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [delay])
 
   return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 24 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
-      transition={{ duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] }}
-      className={className}
-    >
+    <div ref={ref} className={className}>
       {children}
-    </motion.div>
+    </div>
   )
 }

@@ -11,7 +11,7 @@ export function ContactSection() {
           <div className="text-center mb-12">
             <SectionTag className="mb-4">Contato</SectionTag>
             <h2 className="font-display font-light text-pedra text-4xl md:text-5xl">
-              Vamos conversar?
+              Agende em Campo Mourão
             </h2>
           </div>
         </FadeUp>
